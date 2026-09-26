@@ -13,7 +13,7 @@
 | Genesis hash | GENESIS_HASH_PLACEHOLDER |
 | Migration date | 2026-09-25 (ratified) to 2026-09-26 (executed) |
 | Consensus before | PoW (GHOSTDAG k=3) |
-| Consensus after | PoA (3 authorities, threshold 2, 120s slots) |
+| Consensus after | PoA (3 authorities, threshold 2, 3s slots) |
 | RFC-006 tokenomics | Active throughout |
 | Block height at migration | ~658 |
 
@@ -120,7 +120,7 @@ Per RFC-006 PoA migration ratification, the following will be removed from kovan
 ### Block Production
 
 - **Slot adherence**: 100% (no missed slots in 135 blocks observed)
-- **Block time**: 120.0s +/- 0.1s
+- **Block time**: 3.0s +/- 0.1s
 - **Orphan rate**: 0% (PoA finality)
 - **Sync**: All peers synced within 2 slots
 
