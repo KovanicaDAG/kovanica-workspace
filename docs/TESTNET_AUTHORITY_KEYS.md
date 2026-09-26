@@ -1,0 +1,1 @@
+/root/kovanica/protocol/docs/TESTNET_AUTHORITY_KEYS.md

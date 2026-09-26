@@ -1,0 +1,1 @@
+/root/kovanica/protocol/docs/RUN-A-NODE.md

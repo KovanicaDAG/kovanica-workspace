@@ -1,0 +1,1 @@
+/root/kovanica/protocol/docs/RFC-003-ScriptV2-and-Stealth.md

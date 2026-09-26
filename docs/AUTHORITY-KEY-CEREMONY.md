@@ -1,0 +1,1 @@
+/root/kovanica/protocol/docs/AUTHORITY-KEY-CEREMONY.md

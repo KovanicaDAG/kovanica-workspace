@@ -1,0 +1,1 @@
+/root/kovanica/protocol/docs/TOKENOMICS.md
