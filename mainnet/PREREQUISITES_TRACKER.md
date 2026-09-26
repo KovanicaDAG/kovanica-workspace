@@ -9,16 +9,16 @@
 
 | # | Prerequisite | Owner | Target Date | Status | Evidence/Notes |
 |---|--------------|-------|-------------|--------|----------------|
-| 1 | RFC-006 tokenomics stable on testnet ≥30d | Core | 2026-10-26 | ⬜ | Activated 2026-09-26; need 30 days |
+| 1 | RFC-006 tokenomics stable on testnet ≥30d | Core | 2026-10-26 | 🟡 | Activated 2026-09-26; 30-day clock started |
 | 2 | PoA consensus validated ≥2 authority rotations | Core | 2026-11-26 | ⬜ | First rotation at T+180d? |
 | 3 | KVP-101 Multisig audited & battle-tested | Security | 2026-10-15 | ⬜ | Used in testnet treasury |
 | 4 | KVP-102 Multi-asset audited | Security | 2026-10-15 | ⬜ | Live on mainnet web |
 | 5 | KVP-103 Stealth + Script v2 audited | Security | 2026-10-20 | ⬜ | |
 | 6 | KVP-104 HTLC audited | Security | 2026-10-20 | ⬜ | |
 | 7 | KVP-105 Vault/CSV audited | Security | 2026-10-20 | ⬜ | Testnet treasury uses these |
-| 8 | Security audit (crypto, P2P, consensus, supply) | External | 2026-11-01 | ⬜ | RFP to audit firms |
+| 8 | Security audit (crypto, P2P, consensus, supply) | External | 2026-11-01 | ⬜ | RFP drafted (SECURITY_AUDIT_RFP.md) |
 | 9 | Community governance approval | Governance | 2026-11-15 | ⬜ | Proposal + vote |
-| 10 | Legal/compliance review | Legal | 2026-11-15 | ⬜ | Jurisdiction analysis |
+| 10 | Legal/compliance review | Legal | 2026-11-15 | ⬜ | Template drafted (LEGAL_MEMO_TEMPLATE.md) |
 | 11 | Monitoring/alerting deployed (Grafana, Loki) | Infra | 2026-10-31 | ⬜ | Extend testnet stack |
 | 12 | Incident response runbook rehearsed | Ops | 2026-11-15 | ⬜ | Tabletop exercise |
 
@@ -35,6 +35,11 @@
 | 17 | Reproducible builds (node, cli) | Core | T-7d | ⬜ | Docker/guix? |
 | 18 | Publish binary hashes (SHA256) | Core | T-7d | ⬜ | Transparency log |
 | 19 | Distribute binaries + verify instructions | Coordinators | T-1d | ⬜ | Secure channel |
+| 20 | Authority key ceremony doc | Core | 2026-09-26 | ✅ | AUTHORITY_KEY_CEREMONY.md done |
+| 21 | Genesis playbook doc | Core | 2026-09-26 | ✅ | GENESIS_PLAYBOOK.md done |
+| 22 | Prerequisites tracker | Core | 2026-09-26 | ✅ | PREREQUISITES_TRACKER.md done |
+| 23 | Security audit RFP | Core | 2026-09-26 | ✅ | SECURITY_AUDIT_RFP.md done |
+| 24 | Legal memo template | Legal | 2026-09-26 | ✅ | LEGAL_MEMO_TEMPLATE.md done |
 
 ---
 
@@ -42,15 +47,20 @@
 
 | # | Component | Owner | Target Date | Status | Notes |
 |---|-----------|-------|-------------|--------|-------|
-| 20 | DNS: seed1.mainnet.kovanica.online | Infra | T-7d | ⬜ | Grey-cloud only |
-| 21 | DNS: seed2.mainnet.kovanica.online | Infra | T-7d | ⬜ | Grey-cloud only |
-| 22 | DNS: seed3.mainnet.kovanica.online | Infra | T-7d | ⬜ | Grey-cloud only |
-| 23 | DNS: api.mainnet.kovanica.online | Infra | T-7d | ⬜ | Orange-cloud OK (HTTP) |
-| 24 | DNS: explorer.mainnet.kovanica.online | Infra | T-7d | ⬜ | Orange-cloud OK |
-| 25 | Seed VPS provisioning (3x) | Infra | T-7d | ⬜ | 4CPU/8GB/200GB min |
-| 26 | Validator VPS provisioning (7x) | Validators | T-1d | ⬜ | Operator responsibility |
-| 27 | Monitoring stack (mainnet) | Infra | T-1d | ⬜ | Separate from testnet |
-| 28 | Alerting rules (block lag, peer loss, sync) | Ops | T-1d | ⬜ | PagerDuty integration |
+| 25 | DNS: seed1.mainnet.kovanica.online | Infra | T-7d | ⬜ | Grey-cloud only |
+| 26 | DNS: seed2.mainnet.kovanica.online | Infra | T-7d | ⬜ | Grey-cloud only |
+| 27 | DNS: seed3.mainnet.kovanica.online | Infra | T-7d | ⬜ | Grey-cloud only |
+| 28 | DNS: api.mainnet.kovanica.online | Infra | T-7d | ⬜ | Orange-cloud OK (HTTP) |
+| 29 | DNS: explorer.mainnet.kovanica.online | Infra | T-7d | ⬜ | Orange-cloud OK |
+| 30 | Seed VPS provisioning (3x) | Infra | T-7d | ⬜ | 4CPU/8GB/200GB min |
+| 31 | Validator VPS provisioning (7x) | Validators | T-1d | ⬜ | Operator responsibility |
+| 32 | Monitoring stack (mainnet) | Infra | T-1d | ⬜ | Separate from testnet |
+| 33 | Alerting rules (block lag, peer loss, sync) | Ops | T-1d | ⬜ | PagerDuty integration |
+| 34 | Seed systemd templates | Core | 2026-09-26 | ✅ | mainnet/systemd/kovanica-seed*.service |
+| 35 | Validator systemd template | Core | 2026-09-26 | ✅ | mainnet/systemd/kovanica-validator.service |
+| 36 | Seed deploy script | Core | 2026-09-26 | ✅ | scripts/deploy-mainnet-seed.sh |
+| 37 | Validator deploy script | Core | 2026-09-26 | ✅ | scripts/deploy-mainnet-validator.sh |
+| 38 | Mainnet env template | Core | 2026-09-26 | ✅ | mainnet/env.sh |
 
 ---
 
@@ -119,5 +129,5 @@
 
 ---
 
-*Last updated: 2026-09-26*  
+*Last updated: 2026-09-26 (docs + scripts complete, ready for audit/legal/governance)*  
 *Next review: Weekly until T-30d, then daily*
