@@ -7,7 +7,7 @@ set -euo pipefail
 ZONE_NAME="kovanica.online"
 RECORD_NAME="seed2"
 RECORD_TYPE="A"
-TARGET_IP="145.223.116.178"  # Current server public IPv4
+TARGET_IP="76.13.250.65"  # Seed2 server public IPv4 (separate node)
 TTL=300  # 5 minutes
 
 if [[ -z "${CLOUDFLARE_API_TOKEN:-}" ]]; then
