@@ -110,7 +110,7 @@
 
 | Blocker | Decision Needed | By Whom | By When |
 |---------|-----------------|---------|---------|
-| Audit budget | Approve $50-100k for 3rd party audit | Treasury multisig | 2026-10-03 |
+| Audit engagement | Approve scope & engage firm | Treasury multisig | 2026-10-03 |
 | Validator slots | Confirm 7 operators committed | Governance | 2026-10-15 |
 | Jurisdiction | Primary legal domicile for foundation | Legal/Board | 2026-10-10 |
 | Slot duration | 120s (mainnet) vs 3s (testnet) — confirmed? | Core | 2026-10-03 |

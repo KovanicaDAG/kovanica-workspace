@@ -4,7 +4,7 @@
 **Issued**: 2026-09-26  
 **Response Deadline**: 2026-10-03  
 **Engagement Period**: 30 days (target start: 2026-10-06)  
-**Budget Range**: $50,000 – $100,000 USD  
+**Budget Range**: To be discussed based on scope  
 **Classification**: CONFIDENTIAL — NDA required before code access
 
 ---
@@ -142,7 +142,7 @@ Include:
 2. Team members assigned + bios
 3. Proposed methodology & tooling
 4. Timeline with milestones
-5. Cost breakdown (fixed fee preferred)
+5. Proposed fee structure
 6. References (2+ past clients)
 
 ---
