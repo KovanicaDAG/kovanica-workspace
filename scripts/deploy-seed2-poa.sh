@@ -15,9 +15,17 @@
 # Example (Hostinger KVM2 - 76.13.250.65):
 #   ./scripts/deploy-seed2-poa.sh root@76.13.250.65 --name seed2
 
+
+usage() { grep '^#' "$0" | cut -c4-; exit 0; }
+
 set -euo pipefail
 
-TARGET=""
+# Source seed2 env for SSH config if available
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SEED2_ENV="${SCRIPT_DIR}/../testnet/seeds/seed2/env.sh"
+[[ -f "$SEED2_ENV" ]] && source "$SEED2_ENV"
+
+TARGET="${TARGET:-${SEED2_SSH_USER}@${SEED2_SSH_HOST}}"
 NAME="seed2"
 PEERS="seed.kovanica.online:9000"
 EXPLORER_PORT=8080
@@ -26,12 +34,10 @@ KEEP_BUILD=0
 METRICS_PORT=9090
 
 # PoA config (must match seed1 and other authorities)
-AUTHORITIES="43c03a76d831073c0584f5bd1ec401e93a41d154cbed2fb6a4f11a4f92c10979,cf94691392bcf334c82adcb0c7494d0eec946764e802030638f745457782f862,98d467627c7877a687008e7b7bbcdcf79a0aa8af4e1430a5da24422a9bff539a"  # REPLACE with actual 64-char hex pubkeys
+# From running seed1 node (kovanica-poa service)
+AUTHORITIES="43c03a76d831073c0584f5bd1ec401e93a41d154cbed2fb6a4f11a4f92c10979,cf94691392bcf334c82adcb0c7494d0eec946764e802030638f745457782f862,98d467627c7877a687008e7b7bbcdcf79a0aa8af4e1430a5da24422a9bff539a"
 THRESHOLD=2
 SLOT_DURATION=3000  # milliseconds (3 seconds per slot)
-
-usage() { grep '^#' "$0" | cut -c4-; exit 0; }
-
 while [[ $# -gt 0 ]]; do
     case $1 in
         -h|--help) usage ;;

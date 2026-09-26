@@ -4,6 +4,11 @@
 # P2P: seed2.kovanica.online:9000 (grey-cloud DNS)
 # Authority keys: see /root/kovanica/protocol/TESTNET_AUTHORITY_KEYS.md
 
+# SSH connection (for deploy/management from workspace)
+export SEED2_SSH_HOST="76.13.250.65"
+export SEED2_SSH_USER="root"
+export SEED2_SSH_KEY="${HOME}/.ssh/id_rsa"  # or path to specific key
+
 export KOVANICA_LISTEN=0.0.0.0:9000
 export KOVANICA_PEERS=seed.kovanica.online:9000
 export KOVANICA_FAUCET=0
